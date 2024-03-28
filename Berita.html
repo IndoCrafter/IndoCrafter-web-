@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IndoCrafter News</title>
+
+</head>
+<link rel="stylesheet" href="Style.css">
+<body>
+  <script src="script.js"></script>
+
+
+<div class="search-container">
+  <input type="text" id="searchInput" class="search-input" onkeyup="searchNews()" placeholder="Cari berita...">
+  <button class="search-button" onclick="searchNews()">Cari</button>
+  
+  <select id="categorySelect" class="search-input" onchange="searchNews()">
+    <option value="">Semua Kategori</option>
+    <option value="Informasi">Informasi</option>
+    <option value="Event">Event</option>
+    <option value="Meme">Meme</option>
+    <!-- Tambahkan kategori lain jika diperlukan -->
+  </select>
+</div>
+
+
+<div id="news-container" class="animate__animated animate__fadeIn">
+  <div class="news-box" data-category="Informasi">
+    <img class="news-image" src="https://telegra.ph/file/c0d29a8e01e7062baea7a.jpg" alt="News Image" style="width: 300px;">
+    <div class="news-info">
+      <h2 class="news-title">Rewind McAnimID ga bakal Bikin Rewind Lagi?</h2>
+      <p>Kamis 28 Maret 2024</p>
+      <p class="news-description">
+Oke Jadi Rewind Minecraft 2023 Milik McAnimID merupakan Rewind terkahir Mereka.
+<br>
+<br>
+
+Tapi kenapa? Kalian bisa liat Disini Yang menyelipkan Info penting tersebut (tombol Selengkapnya)
+<br>
+<br>
+Tapi ini bukanlah akhir dari McAnimID karena mereka akan terus berkarya dan alur cerita dari Rewind Akan terus dilanjutkan namun dalam konsep yang Berbeda bukan dalam bentuk Rewind lagi
+<br>
+<br>
+Lebih lengkap dan jelasnya disini
+</p>
+      <p class="show-more" onclick="toggleDescription(this)">Baca Selengkapnya</p>
+      <a href="https://youtu.be/9tBrPNIn9fk?si=eAGQMZWuYCBz4fMX" class="news-button">Selengkapnya</a>
+    </div>
+  </div
+<div id="news-container" class="animate__animated animate__fadeIn">
+  <div class="news-box" data-category="Informasi">
+    <img class="news-image" src="https://telegra.ph/file/3024efcd6b535533a65bb.jpg" alt="News Image" style="width: 300px;">
+    <div class="news-info">
+      <h2 class="news-title">Marketplace Minecraft Diskon 75%</h2>
+      <p>Rabu 27 Maret 2024</p>
+      <p class="news-description">Musim semi sudah tiba — dan juga ada di Pasar Minecraft!
+
+Spring Sale berjalan dari 26 Maret hingga 2 April dengan konten terpilih diskon hingga 75% dan dunia gratis dari Hermitcraft. Lihat semua kesenangan musim semi demam! 
+
+Sumber: Facebook Minecraft</p>
+      <p class="show-more" onclick="toggleDescription(this)">Baca Selengkapnya</p>
+      <a href="https://aka.ms/SpringSale " class="news-button">Selengkapnya</a>
+    </div>
+  </div
+
+<div id="news-container" class="animate__animated animate__fadeIn">
+  <div class="news-box" data-category="Meme">
+    <img class="news-image" src="https://telegra.ph/file/c90bd3aa9ee4fd6f5b187.jpg" alt="News Image" style="width: 300px;">
+    <div class="news-info">
+      <h2 class="news-title">Meme minecraft</h2>
+      <p>Selasa 26 Maret 2024</p>
+      <p class="news-description"></p>
+      <p class="show-more" onclick="toggleDescription(this)">Baca Selengkapnya</p>
+      <a href="https://whatsapp.com/channel/0029VaIN4xM0gcfFgMzy5o3d/271" class="news-button">Selengkapnya</a>
+    </div>
+  </div>
+
+  <div class="news-box" data-category="Informasi">
+    <img class="news-image" src="https://telegra.ph/file/98888f6383f77cbc5d629.jpg" alt="News Image" style="width: 300px;">
+    <div class="news-info">
+      <h2 class="news-title">Sekarang villager cartographer di minecraft menjual map yang mengarah ke structure trial chamber </h2>
+      <p>24 Maret 2024</p>
+      <p class="news-description">
+
+<b>• PETA PENJELAJAHI TRIAL CHAMBER</b>
+<br>
+<br>
+Tidak perlu bersusah payah lagi untuk menemukan Trial chamber - naikkan level Kartografer terdekat Anda ke Journeyman untuk mendapat kesempatan menukar Peta Penjelajah yang menunjuk ke Percobaan chamber terdekat
+<br>
+<br>
+Tapi ini belum ada di minecraft bedrock dan Minecraft java official jadi ini masih dalam pengembangan snapshot 24w12a
+<br>
+<br>
+Untuk info lebib lengkap :
+
+</p>
+      <p class="show-more" onclick="toggleDescription(this)">Baca Selengkapnya</p>
+      <a href="https://www.minecraft.net/en-us/article/minecraft-snapshot-24w12a
+" class="news-button">Selengkapnya</a>
+    </div>
+  </div>
+</div>
+
+<div class="overlay"></div>
+
+<nav class="navbar">
+    <div class="brand">IndoCrafter</div>
+    <div class="hamburger" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    <ul class="menu">
+        <li><a href="Beranda.html" class="active"><b>Beranda</b></a></li>
+        <li><a href="Tentang.html"><b>Tentang</b></a></li>
+        <li><a href="Hubungi kami.html"><b>Hubungi Kami</b></a></li>
+        <li><a href="Toko.html"><b>Toko</b></a></li>
+        <li><a href="Berita.html"><b>Berita</b></a></li>
+    </ul>
+</nav>
+
+
+</body>
+</html>

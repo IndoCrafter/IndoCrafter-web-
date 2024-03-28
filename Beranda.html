@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndoCrafter</title>
+    <link rel="stylesheet" href="Style.css">
+
+</head>
+<body>
+    <script src="script.js"></script>
+<nav class="navbar">
+    <div class="brand">IndoCrafter</div>
+    <div class="hamburger" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    <ul class="menu">
+        <li><a href="Beranda.html" class="active"><b>Beranda</b></a></li>
+        <li><a href="Tentang.html"><b>Tentang</b></a></li>
+        <li><a href="Hubungi kami.html"><b>Hubungi Kami</b></a></li>
+        <li><a href="Toko.html"><b>Toko</b></a></li>
+        <li><a href="Berita.html"><b>Berita</b></a></li>
+    </ul>
+</nav>
+
+<div id="game-container" class="animate__animated animate__fadeIn"> <!-- Menambahkan class animate__animated animate__fadeIn -->
+    <img id="game-image" src="https://telegra.ph/file/226a817d35081da723365.jpg" alt="Game Image">
+    <h1>IndoCrafter</h1>
+    <p>IndoCrafter adalah salah satu komunitas Minecraft Indonesia yang ada di platform chat WhatsApp.</p>
+    <button class="button" onclick="showLinks()"><b>Gabung</b></button>
+    <div id="links" class="button-container hidden">
+        <br>
+        <a href="https://chat.whatsapp.com/JUu4LMrDuWNBUiDTwMSZTn" class="button">Join Grup WA</a>
+        <br>
+        <a href="" class="button">Join Server Discord</a>
+    </div>
+</div>
+
+</body>
+</html>

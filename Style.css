@@ -1,0 +1,706 @@
+Kode CSS ini mencakup Semua halaman dan halaman yang lain benar kecuali halaman shop dan berita pada halaman tersebut box produk dan box berita itu eror box Yang pertama muncul yang seharusnya di tengah halaman malahan di atas halaman
+
+
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://telegra.ph/file/4a199ae54d543b7343e5c.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #02253B;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 10px 20px;
+    z-index: 1000;
+  }
+
+  .brand {
+    font-size: 1.2rem;
+  }
+
+  .menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    flex-direction: column;
+    background-color: #02253B;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .menu.active {
+    display: flex;
+    animation: slideDown 0.5s ease forwards;
+  }
+
+  .menu li {
+    margin-left: 20px;
+    margin-bottom: 10px; /* Tambahkan jarak antara setiap elemen li */
+  }
+
+  .menu li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+    font-size: 1.1rem; /* Ukuran font yang sedikit lebih besar */
+  }
+
+  .menu li a:hover {
+    color: #4CAF50;
+  }
+
+  .menu li.active a { /* Efek menu aktif */
+    font-weight: bold;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+    transition: transform 0.3s ease;
+  }
+
+  /* Posisi hamburger ke kanan */
+  @media screen and (min-width: 769px) {
+    .hamburger {
+      order: 3;
+    }
+  }
+
+  /* Animasi untuk hamburger */
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  /* Animasi untuk menu navigasi */
+  @keyframes slideDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Atur margin-top agar box game tidak terlalu dekat dengan navbar */
+  #game-container {
+    width: 80%;
+    max-width: 600px;
+    background-color: #02253B;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    margin-top: 120px; /* Sesuaikan margin-top agar box game berada di bawah navbar */
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Menambahkan bayangan pada kotak permainan */
+  }
+
+  #game-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+
+  .button-container {
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeInUp 0.5s forwards;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .button {
+    padding: 15px 30px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    margin: auto;
+    display: block;
+    width: 100%; /* Membuat tombol memenuhi lebar penuh */
+    box-sizing: border-box;
+  }
+
+  .button:hover {
+    background-color: #45a049;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  /* Animasi masuk */
+  @keyframes slide-in {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  .animate__animated {
+    animation-name: slide-in;
+    animation-duration: 0.5s;
+  }
+
+
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://telegra.ph/file/4a199ae54d543b7343e5c.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+  }
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #02253B;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 10px 20px;
+    z-index: 1000;
+}
+
+.brand {
+    font-size: 1.2rem;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    flex-direction: column;
+    background-color: #02253B;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.menu.active {
+    display: flex;
+    animation: slideDown 0.5s ease forwards;
+}
+
+.menu li {
+    margin-left: 20px;
+    margin-bottom: 10px; /* Tambahkan jarak antara setiap elemen li */
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+    font-size: 1.1rem; /* Ukuran font yang sedikit lebih besar */
+}
+
+.menu li a:hover {
+    color: #4CAF50;
+}
+
+.menu li.active a { /* Efek menu aktif */
+    font-weight: bold;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+    transition: transform 0.3s ease;
+}
+
+/* Posisi hamburger ke kanan */
+@media screen and (min-width: 769px) {
+    .hamburger {
+        order: 3;
+    }
+}
+
+/* Animasi untuk hamburger */
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Animasi untuk menu navigasi */
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+  
+  #news-container {
+    width: 80%;
+    max-width: 600px;
+    background-color: #02253B;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 150px; /* Menyesuaikan margin-top agar tidak tertutup oleh navbar */
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .news-box {
+    background-color: #12232E;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .news-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .news-description {
+    margin-bottom: 10px;
+  }
+  
+  .news-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .news-button:hover {
+    background-color: #45a049;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .search-container {
+  position: sticky; /* Membuat kotak pencarian menempel */
+  top: 60px; /* Menetapkan posisi di bawah navbar */
+  margin-top: 1px; /* Jarak 1px dari navbar */
+  width: calc(100% - 40px); /* Lebar 100% dikurangi margin kiri dan kanan (20px masing-masing) */
+  max-width: 600px;
+  background-color: #02253B;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* Menetapkan z-index agar menempel di atas konten */
+}
+  
+
+  
+  
+  .news-description {
+    margin-bottom: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    webkit-line-clamp: 1; /* Jumlah baris yang ingin ditampilkan sebelum "Baca Selengkapnya" */
+    -webkit-box-orient: vertical;
+  }
+  
+  .show-more {
+    color: #4CAF50;
+    cursor: pointer;
+  }
+
+
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://telegra.ph/file/4a199ae54d543b7343e5c.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+  }
+  
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #02253B;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 10px 20px;
+    z-index: 1000;
+}
+
+.brand {
+    font-size: 1.2rem;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    flex-direction: column;
+    background-color: #02253B;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.menu.active {
+    display: flex;
+    animation: slideDown 0.5s ease forwards;
+}
+
+.menu li {
+    margin-left: 20px;
+    margin-bottom: 10px; /* Tambahkan jarak antara setiap elemen li */
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+    font-size: 1.1rem; /* Ukuran font yang sedikit lebih besar */
+}
+
+.menu li a:hover {
+    color: #4CAF50;
+}
+
+.menu li.active a { /* Efek menu aktif */
+    font-weight: bold;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+    transition: transform 0.3s ease;
+}
+
+/* Posisi hamburger ke kanan */
+@media screen and (min-width: 769px) {
+    .hamburger {
+        order: 3;
+    }
+}
+
+/* Animasi untuk hamburger */
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Animasi untuk menu navigasi */
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+  
+  #product-container {
+    width: 80%;
+    max-width: 600px;
+    background-color: #02253B;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 150px; /* Menyesuaikan margin-top agar tidak tertutup oleh navbar */
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .product-box {
+    background-color: #12232E;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .product-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .product-description {
+    margin-bottom: 10px;
+  }
+  
+  .product-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .product-button:hover {
+    background-color: #45a049;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .search-container {
+  position: sticky; /* Membuat kotak pencarian menempel */
+  top: 60px; /* Menetapkan posisi di bawah navbar */
+  margin-top: 1px; /* Jarak 1px dari navbar */
+  width: calc(100% - 40px); /* Lebar 100% dikurangi margin kiri dan kanan (20px masing-masing) */
+  max-width: 600px;
+  background-color: #02253B;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* Menetapkan z-index agar menempel di atas konten */
+}
+  
+  .search-input {
+  width: 80%; /* Menetapkan lebar 80% untuk input pencarian */
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #12232E;
+  color: white;
+  margin-right: 5px; /* Mengurangi margin kanan agar terlihat lebih rapi */
+}
+
+/* Menyesuaikan lebar input kategori */
+#categorySelect {
+  width: 20%; 
+  background-color: #4caf50;
+  margin-left: 3px;
+  /* Menetapkan lebar 20% untuk input kategori */
+}
+  
+  .search-button {
+    padding: 10px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .search-button:hover {
+    background-color: #45a049;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+ 
+  .product-description {
+  margin-bottom: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.product-description.collapsed {
+  -webkit-line-clamp: 1;
+}
+  
+  .show-more {
+    color: #4CAF50;
+    cursor: pointer;
+  }
+  
+  .slider {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+  }
+
+  .prev {
+    left: 0;
+  }
+
+  .next {
+    right: 0;
+  }
+
+  .slide {
+    display: inline-block;
+    width: 100%;
+    transition: transform 0.5s ease;
+  }
+  
+  .product-images {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none; /* Hapus scrollbar di browser Firefox */
+    -ms-overflow-style: none; /* Hapus scrollbar di browser Internet Explorer dan Edge */
+  }
+  
+  .product-images::-webkit-scrollbar {
+    display: none; /* Hapus scrollbar di browser Chrome, Safari, dan Opera */
+  }
+
+/* CSS lainnya di sini */
+
+/* Media query untuk perangkat seluler */
+@media screen and (max-width: 600px) {
+  /* Menyembunyikan panah slider pada perangkat seluler */
+  .arrow {
+    display: none;
+  }
+
+  /* Menampilkan pesan bahwa gambar dapat digeser pada perangkat seluler */
+  .product-images::before {
+    content: "Geser untuk melihat gambar lain";
+    position: absolute;
+    bottom: 0px; /* Posisi pesan di bawah gambar */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    z-index: 1;
+  }
+}

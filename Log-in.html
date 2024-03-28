@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IndoCrafter - Daftar/Login</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://telegra.ph/file/4a199ae54d543b7343e5c.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .navbar {
+    background-color: #02253B;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .navbar a {
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 10px 5px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  .navbar .icon {
+    display: none;
+  }
+
+  .navbar img.logo {
+    width: 30%;
+    height: 50px;
+    margin-left: 5px;
+    float: left;
+  }
+
+  @media screen and (max-width: 600px) {
+    .navbar.responsive .icon {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    .navbar.responsive a:not(:first-child) {display: block;}
+  }
+
+  #form-container {
+    width: 80%;
+    max-width: 600px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    color: #02253B;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  #form-container h2 {
+    margin-bottom: 20px;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  button {
+    margin: 10px 0;
+    padding: 10px;
+    width: 80%;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  button:hover {
+    background-color: #45a049;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  @keyframes slide-in {
+    from {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate__animated {
+    animation-name: slide-in;
+    animation-duration: 0.5s;
+  }
+</style>
+</head>
+<body>
+
+<div class="navbar" id="myNavbar">
+  <a href="#"><img src="https://telegra.ph/file/cffdfc39d34b93b963806.jpg" alt="Logo" class="logo"></a>
+  <a href="#" class="icon" onclick="myFunction(); toggleIcon();">&#9776;</a>
+  <div id="overlay" class="overlay"></div>
+  <div id="menu" class="menu">
+
+    <a href="#">Kembali</a>
+
+  </div>
+     <h1>COMING SOON</h1>
+</div>
+
+<div id="form-container" class="animate__animated animate__fadeIn">
+  <h2>Silakan Daftar atau Login</h2>
+  <form>
+    <input type="text" placeholder="Nama Pengguna" required><br>
+    <input type="password" placeholder="Kata Sandi" required><br>
+    <button type="submit">Daftar/Login</button>
+  </form>
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myNavbar");
+  var overlay = document.getElementById("overlay");
+  var menu = document.getElementById("menu");
+  
+  if (x.className === "navbar") {
+    x.className += " responsive";
+    overlay.style.display = "block";
+    menu.style.display = "block";
+  } else {
+    x.className = "navbar";
+    overlay.style.display = "none";
+    menu.style.display = "none";
+  }
+}
+
+function toggleIcon() {
+  var navbar = document.getElementById("myNavbar");
+  var icon = document.querySelector('.icon');
+
+  if (navbar.classList.contains('open')) {
+    navbar.classList.remove('open');
+    icon.innerHTML = '&#9776;';
+  } else {
+    navbar.classList.add('open');
+    icon.innerHTML = '&#10006;';
+  }
+}
+</script>
+</body>
+</html>
